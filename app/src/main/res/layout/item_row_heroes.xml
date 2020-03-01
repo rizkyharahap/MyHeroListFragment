@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/dimen_vertical"
     android:layout_marginEnd="@dimen/dimen_vertical"
-    android:layout_marginBottom="@dimen/dimen_vertical"
+    android:layout_marginTop="@dimen/dimen_vertical"
     app:cardCornerRadius="8dp"
     app:cardElevation="1dp"
     app:cardMaxElevation="1dp">
@@ -24,7 +24,6 @@
         <TextView
             android:id="@+id/tv_name"
             style="@style/TextContent.TextTitle"
-            android:fontFamily="@font/quicksand_bold"
             android:text="@string/txt_name"
             android:layout_toEndOf="@id/iv_photo"/>
 

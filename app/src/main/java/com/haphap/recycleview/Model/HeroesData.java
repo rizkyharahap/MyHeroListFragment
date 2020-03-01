@@ -1,4 +1,6 @@
-package com.haphap.recycleview;
+package com.haphap.recycleview.Model;
+
+import com.haphap.recycleview.R;
 
 import java.util.ArrayList;
 
@@ -42,7 +44,7 @@ public class HeroesData {
             R.drawable.tan_malaka
     };
 
-    static ArrayList<Hero> getListData() {
+    public static ArrayList<Hero> getListData() {
         ArrayList<Hero> list = new ArrayList<>();
         for (int position = 0; position < heroNames.length; position++) {
             Hero hero = new Hero();

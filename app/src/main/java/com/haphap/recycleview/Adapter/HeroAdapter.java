@@ -1,7 +1,7 @@
-package com.haphap.recycleview;
+package com.haphap.recycleview.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +10,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.haphap.recycleview.Fragment.DetailFragment;
+import com.haphap.recycleview.Model.Hero;
+import com.haphap.recycleview.R;
 
 import java.util.ArrayList;
 
@@ -80,10 +84,18 @@ public class HeroAdapter extends RecyclerView.Adapter<HeroAdapter.ViewHolder> {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(context,hero.getName(),Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(context, DetailActivity.class);
-                    intent.putExtra("Data", hero);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(intent);
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelable(DetailFragment.EXTRA_DETAIL, hero);
+
+                    DetailFragment fragment = new DetailFragment();
+                    fragment.setArguments(bundle);
+
+                    activity.getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName())
+                            .addToBackStack(null)
+                            .commit();
                 }
             });
 

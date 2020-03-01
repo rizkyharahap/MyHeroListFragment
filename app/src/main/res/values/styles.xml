@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/quicksand</item>
     </style>
 
     <style name="TextContent">
@@ -17,8 +18,8 @@
 
     <style name="TextContent.TextTitle">
         <item name="android:textSize">20sp</item>
-        <item name="android:textFontWeight">600</item>
         <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/quicksand_bold</item>
     </style>
 
     <style name="TextContent.TextDesc">

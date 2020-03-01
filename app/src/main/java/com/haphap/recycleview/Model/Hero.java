@@ -1,4 +1,4 @@
-package com.haphap.recycleview;
+package com.haphap.recycleview.Model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

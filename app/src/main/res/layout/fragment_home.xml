@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_horizontal_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="@dimen/dimen_horizontal"
+            android:paddingTop="@dimen/dimen_horizontal"
+            tools:listitem="@layout/item_column_heroes"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_vertical_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_horizontal"
+            tools:listitem="@layout/item_row_heroes"/>
+    </LinearLayout>
+</FrameLayout>
